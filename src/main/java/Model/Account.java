@@ -115,4 +115,25 @@ public class Account {
                 ", password='" + password + '\'' +
                 '}';
     }
+    public Object getAccountByUsername(String username2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAccountByUsername'");
+    }
+    public Account createAccount(Account account) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createAccount'");
+    }
+    public Account createAccountAccount(Account account) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createAccountAccount'");
+    }
+    public Object getAccountById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAccountById'");
+    }
+    public int getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
 }
+

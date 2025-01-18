@@ -59,7 +59,7 @@ public class UpdateMessageTextTest {
                         "\"message_text\": \"updated message\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(200, status);        
@@ -87,7 +87,7 @@ public class UpdateMessageTextTest {
                         "\"message_text\": \"updated message\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         
         Assert.assertEquals(400, status);        
@@ -110,7 +110,7 @@ public class UpdateMessageTextTest {
                         "\"message_text\": \"\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         
         Assert.assertEquals(400, status);        
@@ -133,7 +133,7 @@ public class UpdateMessageTextTest {
                         "\"message_text\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(400, status);        

@@ -60,7 +60,7 @@ public class UserLoginTest {
                         "\"password\": \"password\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(200, status);
@@ -87,7 +87,7 @@ public class UserLoginTest {
                         "\"password\": \"password\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(401, status);
@@ -112,7 +112,7 @@ public class UserLoginTest {
                         "\"password\": \"pass123\" }"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(401, status);

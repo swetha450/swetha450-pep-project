@@ -61,7 +61,7 @@ public class RetrieveAllMessagesTest {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8080/messages"))
                 .build();
-        HttpResponse response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(200, status);
@@ -88,7 +88,7 @@ public class RetrieveAllMessagesTest {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8080/messages"))
                 .build();
-        HttpResponse response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(200, status);

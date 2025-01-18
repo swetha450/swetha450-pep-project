@@ -1,4 +1,7 @@
 package Model;
+
+import java.util.List;
+
 /**
  * This is a class that models a Message.
  *
@@ -138,5 +141,33 @@ public class Message {
                 ", message_text='" + message_text + '\'' +
                 ", time_posted_epoch=" + time_posted_epoch +
                 '}';
+    }
+    public Message createMessage(Message message) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createMessage'");
+    }
+    public List<Message> getAllMessages() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllMessages'");
+    }
+    public Message getMessageById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMessageById'");
+    }
+    public List<Message> getMessagesByUserId(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMessagesByUserId'");
+    }
+    public boolean deleteMessageById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteMessageById'");
+    }
+    public Message updateMessage(int id, Message message) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'updateMessage'");
+    }
+    public int getId() {
+        // TODO Auto-generated method stub
+return message_id;
     }
 }

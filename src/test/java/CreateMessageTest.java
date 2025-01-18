@@ -63,7 +63,7 @@ public class CreateMessageTest {
                         "\"time_posted_epoch\": 1669947792}"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         Assert.assertEquals(200, status);        
 
@@ -91,7 +91,7 @@ public class CreateMessageTest {
                         "\"time_posted_epoch\": 1669947792}"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
 
         Assert.assertEquals(400, status);        
@@ -116,7 +116,7 @@ public class CreateMessageTest {
                         "\"time_posted_epoch\": 1669947792}"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         
         Assert.assertEquals(400, status);        
@@ -141,7 +141,7 @@ public class CreateMessageTest {
                         "\"time_posted_epoch\": 1669947792}"))
                 .header("Content-Type", "application/json")
                 .build();
-        HttpResponse response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         
         Assert.assertEquals(400, status);        

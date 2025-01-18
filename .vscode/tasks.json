@@ -1,4 +1,3 @@
-
 {
     "version": "2.0.0",
     "presentation": {
@@ -11,7 +10,7 @@
       {
         "label": "install extensions",
         "type": "shell",     
-        "command": "./install-extensions.sh",
+        "command": ["chmod +x install-extensions.sh && ./install-extensions.sh"],
         "runOptions": {
           "runOn": "folderOpen"
         }
